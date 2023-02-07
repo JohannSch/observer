@@ -1,5 +1,6 @@
 # observer.server
 ## V0.1
 ### TODO:
- - [ ] choose background process lib
+ - [x] choose background process lib
+ - [ ] read hangfire docs (https://www.hangfire.io/overview.html)
  - [ ] write test project
