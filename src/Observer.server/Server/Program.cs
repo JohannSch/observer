@@ -20,8 +20,7 @@ public sealed class Program
 
             IHost host = hostBuilder.Build();
             host.Run();
-        }
-        catch (Exception ex)
+        } catch (Exception ex)
         {
             Serilog.ILogger logger = LoggerCreater.CreateConsole();
             logger.Fatal(ex.ToString());

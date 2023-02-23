@@ -1,3 +1,6 @@
+using Server.Core.Extensions;
+using Server.Extensions;
+
 namespace Server;
 
 public sealed class Startup
@@ -11,7 +14,9 @@ public sealed class Startup
 
     public void ConfigureServices(IServiceCollection services)
     {
-        services.AddControllers();
+        services.AddObserverControllers();
+        services.AddObserverServices();
+
         services.AddEndpointsApiExplorer();
         services.AddSwaggerGen();
     }

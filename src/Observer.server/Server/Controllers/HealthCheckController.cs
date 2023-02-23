@@ -9,6 +9,6 @@ public sealed class HealthCheckController : ControllerBase
     [HttpGet("ping")]
     public string Ping([FromQuery] string message = "pong") => message;
 
-    [HttpGet("isalive")]
+    [HttpGet("isAlive")]
     public bool IsAlive() => true;
 }
