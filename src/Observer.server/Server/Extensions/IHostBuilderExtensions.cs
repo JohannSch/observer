@@ -2,7 +2,7 @@ using Serilog;
 
 namespace Server.Extensions;
 
-public static class IWebHostBuilderExtensions
+public static class IHostBuilderExtensions
 {
     public static IHostBuilder ConfigureSerilog(this IHostBuilder hostBuilder)
     {
