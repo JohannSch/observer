@@ -7,5 +7,8 @@ namespace Server.Controllers;
 public sealed class HealthCheckController : ControllerBase
 {
     [HttpGet("ping")]
-    public string Ping() => "pong";
+    public string Ping([FromQuery] string message = "pong") => message;
+
+    [HttpGet("isalive")]
+    public bool IsAlive() => true;
 }
