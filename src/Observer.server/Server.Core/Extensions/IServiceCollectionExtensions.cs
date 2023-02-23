@@ -5,6 +5,7 @@ using Server.Abstractions.Parser;
 using Server.Core.Services;
 
 namespace Server.Core.Extensions;
+
 public static class IServiceCollectionExtensions
 {
     public static IServiceCollection AddObserverServices(this IServiceCollection services)

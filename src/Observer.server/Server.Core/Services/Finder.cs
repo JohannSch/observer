@@ -3,6 +3,7 @@ using Server.Models.Requests;
 using Server.Models.Responses;
 
 namespace Server.Core.Services;
+
 public sealed class Finder : IFinder
 {
     public async Task<Response> FindValueAsync(FindValueRequest request)

@@ -3,6 +3,7 @@ using Server.Models.Requests;
 using Server.Models.Responses;
 
 namespace Server.Core.Services;
+
 public sealed class Observer : IObserver
 {
     public async Task<Response> StartObserveAsync(StartObserveRequest request)
