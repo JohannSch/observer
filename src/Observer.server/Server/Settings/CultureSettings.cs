@@ -2,7 +2,7 @@ using System.Globalization;
 
 namespace Server.Settings;
 
-public static class CultureSettings
+internal static class CultureSettings
 {
-    public static CultureInfo DefaultCultureInfo = new CultureInfo("en-US");
+    public static readonly CultureInfo DefaultCultureInfo = new CultureInfo("en-US");
 }

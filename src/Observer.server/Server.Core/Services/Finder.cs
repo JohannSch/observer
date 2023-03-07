@@ -8,7 +8,7 @@ using Server.Models.Responses;
 
 namespace Server.Core.Services;
 
-public sealed class Finder : IFinder
+internal sealed class Finder : IFinder
 {
     private readonly ILogger<Finder> _logger;
 

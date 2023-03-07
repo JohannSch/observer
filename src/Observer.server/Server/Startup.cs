@@ -1,9 +1,10 @@
 using Server.Core.Extensions;
+using Server.DataBaseLogic.Extensions;
 using Server.Extensions;
 
 namespace Server;
 
-public sealed class Startup
+internal sealed class Startup
 {
     public Startup(IConfiguration configuration)
     {
@@ -16,6 +17,7 @@ public sealed class Startup
     {
         services.AddObserverControllers();
         services.AddObserverServices();
+        services.AddObserverDataBase(Configuration.GetDefaultDbConnectionString());
 
         services.AddEndpointsApiExplorer();
         services.AddSwaggerGen();

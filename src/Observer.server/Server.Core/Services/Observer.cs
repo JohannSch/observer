@@ -4,7 +4,7 @@ using Server.Models.Responses;
 
 namespace Server.Core.Services;
 
-public sealed class Observer : IObserver
+internal sealed class Observer : IObserver
 {
     public async Task<Response> StartObserveAsync(StartObserveRequest request)
     {

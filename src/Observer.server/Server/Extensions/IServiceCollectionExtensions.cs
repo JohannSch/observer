@@ -1,6 +1,6 @@
 namespace Server.Extensions;
 
-public static class IServiceCollectionExtensions
+internal static class IServiceCollectionExtensions
 {
     public static IServiceCollection AddObserverControllers(this IServiceCollection services)
     {
