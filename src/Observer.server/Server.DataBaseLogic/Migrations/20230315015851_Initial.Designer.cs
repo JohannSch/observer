@@ -12,7 +12,7 @@ using Server.DataBaseLogic.Contexts;
 namespace Server.DataBaseLogic.Migrations
 {
     [DbContext(typeof(ObserverContext))]
-    [Migration("20230307224045_Initial")]
+    [Migration("20230315015851_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -23,6 +23,7 @@ namespace Server.DataBaseLogic.Migrations
                 .HasAnnotation("ProductVersion", "7.0.3")
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
+            NpgsqlModelBuilderExtensions.HasPostgresExtension(modelBuilder, "uuid-ossp");
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
             modelBuilder.Entity("Server.DataBaseModels.Models.Requests.FindRequest", b =>

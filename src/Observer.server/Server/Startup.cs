@@ -1,3 +1,4 @@
+using Server.Abstractions.Contexts;
 using Server.Core.Extensions;
 using Server.DataBaseLogic.Extensions;
 using Server.Extensions;
@@ -23,8 +24,12 @@ internal sealed class Startup
         services.AddSwaggerGen();
     }
 
-    public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+#pragma warning disable CA1822 // Mark members as static
+    public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IObserverContext context)
+#pragma warning restore CA1822 // Mark members as static
     {
+        context.Migrate();
+
         if (env.IsDevelopment())
         {
             app.UseSwagger();

@@ -13,6 +13,11 @@ internal sealed class ObserverContext : DbContext, IObserverContext
 
     public DbSet<FindRequest> FindRequest { get; init; }
 
+    public void Migrate()
+    {
+        Database.Migrate();
+    }
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         OnBaseCreating(modelBuilder);
@@ -20,6 +25,8 @@ internal sealed class ObserverContext : DbContext, IObserverContext
 
     private static void OnBaseCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.HasPostgresExtension("uuid-ossp");
+
         IEnumerable<IMutableEntityType> entities = modelBuilder.Model.GetEntityTypes();
 
         string idPropertyName = nameof(Base.Id);

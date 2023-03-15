@@ -22,7 +22,7 @@ public sealed class Program
             host.Run();
         } catch (Exception ex)
         {
-            Serilog.ILogger logger = LoggerCreater.CreateConsole();
+            Serilog.ILogger logger = LoggerHelper.CreateConsole();
             logger.Fatal(ex.ToString());
         }
     }

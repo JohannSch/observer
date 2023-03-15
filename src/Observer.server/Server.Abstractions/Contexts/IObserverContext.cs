@@ -7,4 +7,6 @@ namespace Server.Abstractions.Contexts;
 public interface IObserverContext
 {
     DbSet<FindRequest> FindRequest { get; }
+
+    void Migrate();
 }

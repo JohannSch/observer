@@ -4,7 +4,7 @@ using Server.Settings;
 
 namespace Server.Helpers;
 
-internal static class LoggerCreater
+internal static class LoggerHelper
 {
     public static Serilog.ILogger CreateConsole()
     {
